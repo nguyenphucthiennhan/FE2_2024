@@ -1,0 +1,77 @@
+body {
+  perspective: 800px;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.bg {
+  background-image: url(../images/uni.png);
+  background-size: cover;
+  position: fixed;
+  top: -10%;
+  right: -10%;
+  left: -10%;
+  bottom: -10%;
+  transform-style: preserve-3d;
+  background-position: center center;
+}
+.content {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  bottom: 25%;
+  transform-style: preserve-3d;
+}
+.item {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  transform-style: preserve-3d;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  width: 100%;
+  height: 100%;
+  background: paleturquoise;
+  transform-style: preserve-3d;
+}
+.name {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 210, 49, 0.5);
+  transform-style: preserve-3d;
+  border-radius: 0 0 10px 10px;
+}
+@keyframes bright {
+  100% {
+    transform: translateZ(5px);
+    filter: brightness(1.1);
+  }
+}
+.item:hover {
+  animation: bright 0.3s linear both;
+  box-shadow: rgb(243, 231, 0) 0px 2px 4px 0px,
+    rgb(243, 231, 0) 0px 2px 16px 0px;
+}
+.n{
+  position: fixed;
+  z-index: 20;
+}
+  #search{
+  position: absolute;
+  top: 5%;
+  left: 20%;
+} 
+.btn-loadmore{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
